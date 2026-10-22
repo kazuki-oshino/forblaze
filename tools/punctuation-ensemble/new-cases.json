@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "description": "開発20例と新規検証50例。モデル出力を見る前に固定。既存development10例と合わせて開発30例とし、検証50例の出力は方式選択に使わない。",
+  "cases": [
+    {
+      "id": "D01",
+      "category": "挨拶・好み",
+      "split": "development",
+      "left": "こんばんは",
+      "right": "受付の山本です。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D02",
+      "category": "挨拶・好み",
+      "split": "development",
+      "left": "失礼します",
+      "right": "質問してもよいですか。",
+      "original": "none",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D03",
+      "category": "接続・従属節",
+      "split": "development",
+      "left": "準備が整ったので",
+      "right": "出発しましょう。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D04",
+      "category": "接続・従属節",
+      "split": "development",
+      "left": "気になる点があれば",
+      "right": "遠慮なく教えてください。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D05",
+      "category": "独立した文",
+      "split": "development",
+      "left": "充電が完了しました",
+      "right": "ケーブルを外してください。",
+      "original": "period",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D06",
+      "category": "独立した文",
+      "split": "development",
+      "left": "入口は閉まっています",
+      "right": "裏口へお回りください。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D07",
+      "category": "語句・述語の分断",
+      "split": "development",
+      "left": "もう少し待って",
+      "right": "いただけますか。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D08",
+      "category": "語句・述語の分断",
+      "split": "development",
+      "left": "申し込みを取り",
+      "right": "やめました。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D09",
+      "category": "固有名詞・数字",
+      "split": "development",
+      "left": "有限会社",
+      "right": "若葉へ電話します。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D10",
+      "category": "固有名詞・数字",
+      "split": "development",
+      "left": "長さは20",
+      "right": "センチです。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D11",
+      "category": "列挙・反復",
+      "split": "development",
+      "left": "好きな色は赤",
+      "right": "青、緑です。",
+      "original": "comma",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D12",
+      "category": "列挙・反復",
+      "split": "development",
+      "left": "まずは氏名",
+      "right": "次に生年月日を入力します。",
+      "original": "period",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D13",
+      "category": "引用・括弧",
+      "split": "development",
+      "left": "「また来ます」",
+      "right": "と言って帰りました。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D14",
+      "category": "引用・括弧",
+      "split": "development",
+      "left": "応募書類（履歴書）",
+      "right": "を提出しました。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D15",
+      "category": "変更不要",
+      "split": "development",
+      "left": "電車が到着しました",
+      "right": "ドアが開きます。",
+      "original": "period",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D16",
+      "category": "変更不要",
+      "split": "development",
+      "left": "いつもお世話になって",
+      "right": "おります。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D17",
+      "category": "技術用語・混在文",
+      "split": "development",
+      "left": "アクセスにはAPI",
+      "right": "トークンが必要です。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D18",
+      "category": "技術用語・混在文",
+      "split": "development",
+      "left": "保存できたら",
+      "right": "Gitで差分を確認します。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D19",
+      "category": "話し途中",
+      "split": "development",
+      "left": "大切なのは",
+      "right": "毎日続ける",
+      "original": "none",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "D20",
+      "category": "話し途中",
+      "split": "development",
+      "left": "中村さんに送って",
+      "right": "いただければ",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T01",
+      "category": "挨拶・好み",
+      "split": "evaluation",
+      "left": "初めまして",
+      "right": "編集者の木村です。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T02",
+      "category": "挨拶・好み",
+      "split": "evaluation",
+      "left": "お疲れさまです",
+      "right": "開発チームの森です。",
+      "original": "none",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T03",
+      "category": "挨拶・好み",
+      "split": "evaluation",
+      "left": "もしもし",
+      "right": "予約の件でお電話しました。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T04",
+      "category": "挨拶・好み",
+      "split": "evaluation",
+      "left": "ええ",
+      "right": "その方法で進めてください。",
+      "original": "none",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T05",
+      "category": "挨拶・好み",
+      "split": "evaluation",
+      "left": "申し訳ありません",
+      "right": "少々お待ちください。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T06",
+      "category": "接続・従属節",
+      "split": "evaluation",
+      "left": "風が強いので",
+      "right": "窓を閉めてください。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T07",
+      "category": "接続・従属節",
+      "split": "evaluation",
+      "left": "手続きが終わったら",
+      "right": "受付にお知らせください。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T08",
+      "category": "接続・従属節",
+      "split": "evaluation",
+      "left": "値段は上がりましたが",
+      "right": "品質は変わりません。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T09",
+      "category": "接続・従属節",
+      "split": "evaluation",
+      "left": "説明書を見ながら",
+      "right": "組み立てました。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T10",
+      "category": "接続・従属節",
+      "split": "evaluation",
+      "left": "早く着いたとしても",
+      "right": "開場までは入れません。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T11",
+      "category": "独立した文",
+      "split": "evaluation",
+      "left": "受付は終了しました",
+      "right": "明日改めてお申し込みください。",
+      "original": "period",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T12",
+      "category": "独立した文",
+      "split": "evaluation",
+      "left": "写真を選びました",
+      "right": "次は印刷の設定をします。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T13",
+      "category": "独立した文",
+      "split": "evaluation",
+      "left": "荷物が届きました",
+      "right": "玄関に置いてあります。",
+      "original": "period",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T14",
+      "category": "独立した文",
+      "split": "evaluation",
+      "left": "パスワードを変更しました",
+      "right": "もう一度ログインしてください。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T15",
+      "category": "独立した文",
+      "split": "evaluation",
+      "left": "商品は在庫切れです",
+      "right": "次回の入荷日は決まっていません。",
+      "original": "period",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T16",
+      "category": "語句・述語の分断",
+      "split": "evaluation",
+      "left": "内容を見て",
+      "right": "いただきたいです。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T17",
+      "category": "語句・述語の分断",
+      "split": "evaluation",
+      "left": "参加することに",
+      "right": "なりました。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T18",
+      "category": "語句・述語の分断",
+      "split": "evaluation",
+      "left": "この鍵では開けることが",
+      "right": "できません。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T19",
+      "category": "語句・述語の分断",
+      "split": "evaluation",
+      "left": "そろそろ帰らなければ",
+      "right": "いけません。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T20",
+      "category": "語句・述語の分断",
+      "split": "evaluation",
+      "left": "変更を差し",
+      "right": "戻してください。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T21",
+      "category": "固有名詞・数字",
+      "split": "evaluation",
+      "left": "合同会社",
+      "right": "白波から連絡がありました。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T22",
+      "category": "固有名詞・数字",
+      "split": "evaluation",
+      "left": "大阪府",
+      "right": "吹田市へ引っ越しました。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T23",
+      "category": "固有名詞・数字",
+      "split": "evaluation",
+      "left": "午前10",
+      "right": "時半に予約しています。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T24",
+      "category": "固有名詞・数字",
+      "split": "evaluation",
+      "left": "予算は2万",
+      "right": "5000円です。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T25",
+      "category": "固有名詞・数字",
+      "split": "evaluation",
+      "left": "来週の12月",
+      "right": "5日に発送します。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T26",
+      "category": "列挙・反復",
+      "split": "evaluation",
+      "left": "コーヒー",
+      "right": "紅茶、牛乳を用意しました。",
+      "original": "period",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T27",
+      "category": "列挙・反復",
+      "split": "evaluation",
+      "left": "入力項目は郵便番号",
+      "right": "住所、宛名です。",
+      "original": "comma",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T28",
+      "category": "列挙・反復",
+      "split": "evaluation",
+      "left": "使用言語はSwift",
+      "right": "Python、Goです。",
+      "original": "period",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T29",
+      "category": "列挙・反復",
+      "split": "evaluation",
+      "left": "一つずつ",
+      "right": "一つずつ確かめてください。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T30",
+      "category": "列挙・反復",
+      "split": "evaluation",
+      "left": "今日は掃除",
+      "right": "明日は洗濯をします。",
+      "original": "period",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T31",
+      "category": "引用・括弧",
+      "split": "evaluation",
+      "left": "彼女は「大丈夫です」",
+      "right": "と答えました。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T32",
+      "category": "引用・括弧",
+      "split": "evaluation",
+      "left": "「保存しました」",
+      "right": "という通知が出ました。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T33",
+      "category": "引用・括弧",
+      "split": "evaluation",
+      "left": "集合場所（南口）",
+      "right": "で待っています。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T34",
+      "category": "引用・括弧",
+      "split": "evaluation",
+      "left": "「送信」を押しました",
+      "right": "相手から返信がありました。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T35",
+      "category": "引用・括弧",
+      "split": "evaluation",
+      "left": "窓口で「おはようございます",
+      "right": "加藤です」と伝えました。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T36",
+      "category": "変更不要",
+      "split": "evaluation",
+      "left": "雨はやみました",
+      "right": "散歩に出かけましょう。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T37",
+      "category": "変更不要",
+      "split": "evaluation",
+      "left": "分からなければ",
+      "right": "係員に聞いてください。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T38",
+      "category": "変更不要",
+      "split": "evaluation",
+      "left": "ご協力をお願い",
+      "right": "します。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T39",
+      "category": "変更不要",
+      "split": "evaluation",
+      "left": "ありがとうございました",
+      "right": "お気をつけてお帰りください。",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T40",
+      "category": "変更不要",
+      "split": "evaluation",
+      "left": "購入したのは鉛筆",
+      "right": "消しゴム、ノートです。",
+      "original": "period",
+      "allowed": [
+        "comma"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T41",
+      "category": "技術用語・混在文",
+      "split": "evaluation",
+      "left": "データをJSON",
+      "right": "形式で保存します。",
+      "original": "none",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T42",
+      "category": "技術用語・混在文",
+      "split": "evaluation",
+      "left": "GitHubのIssue",
+      "right": " Trackerを開きます。",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T43",
+      "category": "技術用語・混在文",
+      "split": "evaluation",
+      "left": "キャッシュを消したら",
+      "right": "Safariを再起動してください。",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T44",
+      "category": "技術用語・混在文",
+      "split": "evaluation",
+      "left": "接続先はhttps://sample.exampleです",
+      "right": "設定画面に貼り付けてください。",
+      "original": "comma",
+      "allowed": [
+        "period"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T45",
+      "category": "技術用語・混在文",
+      "split": "evaluation",
+      "left": "対応が終わりました🎉",
+      "right": "結果を報告します。",
+      "original": "period",
+      "allowed": [
+        "period",
+        "none"
+      ],
+      "preferred": "period",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T46",
+      "category": "話し途中",
+      "split": "evaluation",
+      "left": "次に決めたいのは",
+      "right": "会場の",
+      "original": "period",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T47",
+      "category": "話し途中",
+      "split": "evaluation",
+      "left": "この設定を変えるには",
+      "right": "最初に",
+      "original": "comma",
+      "allowed": [
+        "comma",
+        "none"
+      ],
+      "preferred": "comma",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T48",
+      "category": "話し途中",
+      "split": "evaluation",
+      "left": "鈴木さんに見て",
+      "right": "もらってから",
+      "original": "period",
+      "allowed": [
+        "none"
+      ],
+      "preferred": "none",
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T49",
+      "category": "話し途中",
+      "split": "evaluation",
+      "left": "では始めます",
+      "right": "",
+      "original": "period",
+      "allowed": [],
+      "preferred": null,
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    },
+    {
+      "id": "T50",
+      "category": "話し途中",
+      "split": "evaluation",
+      "left": "ありがとうございます",
+      "right": "",
+      "original": "period",
+      "allowed": [],
+      "preferred": null,
+      "reason": "出力を見る前に固定した追加の合成例。カテゴリに対応する表記方針。"
+    }
+  ]
+}

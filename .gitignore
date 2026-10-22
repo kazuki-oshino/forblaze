@@ -1,0 +1,17 @@
+build/
+.build/
+.DS_Store
+*.xcuserstate
+xcuserdata/
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.key
+__pycache__/
+
+# 開発メモ、検証記録、公開準備の作業ファイル
+/.local/
+/.yomiyasu/

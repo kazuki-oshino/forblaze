@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "description": "モデル出力を見る前に固定した合成50例。allowedは筆記文としての許容範囲、preferredは本評価の表記方針。人による独立レビュー前の暫定ラベル。句読点以外の本文は変更しない。各カテゴリ先頭をdevelopment、残りをevaluationとする。",
+  "cases": [
+    {"id":"01","category":"挨拶・好み","split":"development","left":"こんにちは","right":"高須クリニックです。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"依頼の起点。挨拶と名乗りをつなぐ好みであり、句点も文法上は許容する。"},
+    {"id":"02","category":"挨拶・好み","split":"evaluation","left":"おはようございます","right":"営業部の田中です。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"挨拶と名乗り。"},
+    {"id":"03","category":"挨拶・好み","split":"evaluation","left":"お世話になっております","right":"株式会社青空の佐藤です。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"定型挨拶と名乗り。"},
+    {"id":"04","category":"挨拶・好み","split":"evaluation","left":"はい","right":"承知しました。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"短い応答と説明をつなぐ。"},
+    {"id":"05","category":"挨拶・好み","split":"evaluation","left":"すみません","right":"もう一度お願いします。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"呼びかけと依頼。"},
+
+    {"id":"06","category":"接続・従属節","split":"development","left":"雨が降っているので","right":"傘を持っていきます。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"理由節の途中で文を切らない。"},
+    {"id":"07","category":"接続・従属節","split":"evaluation","left":"時間があれば","right":"明日確認します。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"条件節。"},
+    {"id":"08","category":"接続・従属節","split":"evaluation","left":"資料を読んでから","right":"感想を教えてください。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"手順を表す従属節。"},
+    {"id":"09","category":"接続・従属節","split":"evaluation","left":"設定を変更したのに","right":"まだ反映されません。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"逆接の従属節。"},
+    {"id":"10","category":"接続・従属節","split":"evaluation","left":"見積もりを確認したところ","right":"送料が含まれていませんでした。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"確認結果へ続く節。"},
+
+    {"id":"11","category":"独立した文","split":"development","left":"今日は休業日です","right":"明日またお越しください。","original":"comma","allowed":["period"],"preferred":"period","reason":"独立した説明と依頼。"},
+    {"id":"12","category":"独立した文","split":"evaluation","left":"ファイルを保存しました","right":"次にアプリを終了してください。","original":"comma","allowed":["period"],"preferred":"period","reason":"完了した説明から次の手順へ。"},
+    {"id":"13","category":"独立した文","split":"evaluation","left":"会議は終わりました","right":"議事録は後ほど送ります。","original":"none","allowed":["period"],"preferred":"period","reason":"二つの独立した述語。"},
+    {"id":"14","category":"独立した文","split":"evaluation","left":"駅に着きました","right":"今から向かいます。","original":"comma","allowed":["period"],"preferred":"period","reason":"到着報告と次の行動。"},
+    {"id":"15","category":"独立した文","split":"evaluation","left":"この機能はまだ使えません","right":"対応する時期は未定です。","original":"comma","allowed":["period"],"preferred":"period","reason":"二文の説明。"},
+
+    {"id":"16","category":"語句・述語の分断","split":"development","left":"確認して","right":"いただけますか。","original":"period","allowed":["none"],"preferred":"none","reason":"補助動詞の前で分断しない。"},
+    {"id":"17","category":"語句・述語の分断","split":"evaluation","left":"更新することに","right":"しました。","original":"period","allowed":["none"],"preferred":"none","reason":"複合述語の内部。"},
+    {"id":"18","category":"語句・述語の分断","split":"evaluation","left":"それは間違いでは","right":"ありません。","original":"comma","allowed":["none"],"preferred":"none","reason":"否定の述語を保持する。"},
+    {"id":"19","category":"語句・述語の分断","split":"evaluation","left":"明日までに提出しなければ","right":"なりません。","original":"period","allowed":["none"],"preferred":"none","reason":"義務を表すまとまり。"},
+    {"id":"20","category":"語句・述語の分断","split":"evaluation","left":"この変更は取り","right":"消してください。","original":"comma","allowed":["none"],"preferred":"none","reason":"複合動詞の内部。"},
+
+    {"id":"21","category":"固有名詞・数字","split":"development","left":"株式会社","right":"青空に連絡します。","original":"period","allowed":["none"],"preferred":"none","reason":"会社名の内部。実装では辞書保護も別途必要。"},
+    {"id":"22","category":"固有名詞・数字","split":"evaluation","left":"東京都","right":"千代田区に住んでいます。","original":"period","allowed":["none"],"preferred":"none","reason":"住所の内部。"},
+    {"id":"23","category":"固有名詞・数字","split":"evaluation","left":"午後3","right":"時に集合してください。","original":"comma","allowed":["none"],"preferred":"none","reason":"数値と時刻の単位。"},
+    {"id":"24","category":"固有名詞・数字","split":"evaluation","left":"料金は1万","right":"2000円です。","original":"period","allowed":["none"],"preferred":"none","reason":"数値の内部。"},
+    {"id":"25","category":"固有名詞・数字","split":"evaluation","left":"締め切りは2026年10月","right":"11日です。","original":"comma","allowed":["none"],"preferred":"none","reason":"日付の内部。"},
+
+    {"id":"26","category":"列挙・反復","split":"development","left":"りんご","right":"みかん、ぶどうを買いました。","original":"period","allowed":["comma"],"preferred":"comma","reason":"並列する品物。"},
+    {"id":"27","category":"列挙・反復","split":"evaluation","left":"必要なのは氏名","right":"住所、電話番号です。","original":"period","allowed":["comma"],"preferred":"comma","reason":"項目の列挙。"},
+    {"id":"28","category":"列挙・反復","split":"evaluation","left":"対応するOSはmacOS","right":"Windows、Linuxです。","original":"period","allowed":["comma"],"preferred":"comma","reason":"英字名の列挙。"},
+    {"id":"29","category":"列挙・反復","split":"evaluation","left":"ゆっくり","right":"ゆっくり進んでください。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"副詞の反復。"},
+    {"id":"30","category":"列挙・反復","split":"evaluation","left":"いや","right":"いや、それは違います。","original":"period","allowed":["comma","none","period"],"preferred":"comma","reason":"言い直し。発話意図次第で句点も許容する。"},
+
+    {"id":"31","category":"引用・括弧","split":"development","left":"彼は「明日行きます」","right":"と言いました。","original":"period","allowed":["none"],"preferred":"none","reason":"引用と格助詞をつなぐ。"},
+    {"id":"32","category":"引用・括弧","split":"evaluation","left":"「了解しました」","right":"と返事をしました。","original":"comma","allowed":["none"],"preferred":"none","reason":"引用を受ける助詞。"},
+    {"id":"33","category":"引用・括弧","split":"evaluation","left":"設定画面（右上の歯車）","right":"を開いてください。","original":"period","allowed":["none"],"preferred":"none","reason":"括弧の後で目的語を分断しない。"},
+    {"id":"34","category":"引用・括弧","split":"evaluation","left":"「開始」ボタンを押します","right":"録音が始まります。","original":"comma","allowed":["period"],"preferred":"period","reason":"引用を含む二つの独立した文。"},
+    {"id":"35","category":"引用・括弧","split":"evaluation","left":"山田さんは「こんにちは","right":"田中です」と挨拶しました。","original":"period","allowed":["comma","period"],"preferred":"comma","reason":"引用内部の挨拶と名乗り。人物名の不一致は修正対象外。"},
+
+    {"id":"36","category":"変更不要","split":"development","left":"明日は晴れです","right":"洗濯物を外に干せます。","original":"period","allowed":["period"],"preferred":"period","reason":"正しい二文を維持する。"},
+    {"id":"37","category":"変更不要","split":"evaluation","left":"雨が降ったら","right":"中止します。","original":"comma","allowed":["comma","none"],"preferred":"comma","reason":"正しい条件節の読点。"},
+    {"id":"38","category":"変更不要","split":"evaluation","left":"よろしくお願い","right":"します。","original":"none","allowed":["none"],"preferred":"none","reason":"正しい述語を分断しない。"},
+    {"id":"39","category":"変更不要","split":"evaluation","left":"ありがとうございます","right":"またお越しください。","original":"period","allowed":["comma","period"],"preferred":"period","reason":"挨拶同士は句点を維持する方針。"},
+    {"id":"40","category":"変更不要","split":"evaluation","left":"持ち物は水筒","right":"タオル、帽子です。","original":"comma","allowed":["comma"],"preferred":"comma","reason":"正しい列挙を維持する。"},
+
+    {"id":"41","category":"技術用語・混在文","split":"development","left":"この処理はAPI","right":"キーを使います。","original":"period","allowed":["none"],"preferred":"none","reason":"英字とカタカナの複合語。"},
+    {"id":"42","category":"技術用語・混在文","split":"evaluation","left":"GitHubのPull","right":" Requestを確認してください。","original":"comma","allowed":["none"],"preferred":"none","reason":"英単語のまとまりと空白を保持する。"},
+    {"id":"43","category":"技術用語・混在文","split":"evaluation","left":"アプリを再起動すると","right":"MLXモデルが読み込まれます。","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"技術用語を含む条件節。"},
+    {"id":"44","category":"技術用語・混在文","split":"evaluation","left":"URLはhttps://example.comです","right":"ブラウザーで開いてください。","original":"comma","allowed":["period"],"preferred":"period","reason":"URL内のピリオドを保持したまま文を区切る。"},
+    {"id":"45","category":"技術用語・混在文","split":"evaluation","left":"修正できました😊","right":"次の作業に進みます。","original":"period","allowed":["period","none"],"preferred":"period","reason":"絵文字は本文として保持する。"},
+
+    {"id":"46","category":"話し途中","split":"development","left":"今回の変更は","right":"設定画面の","original":"period","allowed":["comma","none"],"preferred":"none","reason":"述語がまだない部分認識。"},
+    {"id":"47","category":"話し途中","split":"evaluation","left":"この機能を使うには","right":"まず","original":"period","allowed":["comma","none"],"preferred":"comma","reason":"条件と続き始め。"},
+    {"id":"48","category":"話し途中","split":"evaluation","left":"田中さんに確認して","right":"もらってから","original":"period","allowed":["none"],"preferred":"none","reason":"未完成でも補助動詞の内部はつながる。"},
+    {"id":"49","category":"話し途中","split":"evaluation","left":"こんにちは","right":"","original":"period","allowed":[],"preferred":null,"reason":"右文脈がなく名乗りが続くか不明。正誤集計から除き強制選択時の挙動だけ観察する。"},
+    {"id":"50","category":"話し途中","split":"evaluation","left":"ここで一度確認します","right":"","original":"period","allowed":[],"preferred":null,"reason":"完結か次の節への接続か未確定。正誤集計から除き強制選択時の挙動だけ観察する。"}
+  ]
+}

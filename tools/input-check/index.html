@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>forblaze ローカル入力検証</title>
+<style>body{font:18px system-ui;max-width:850px;margin:36px auto;padding:24px;background:#f7f8fa;color:#172032}label{display:block;margin:20px 0 8px}input,textarea,[contenteditable]{box-sizing:border-box;width:100%;font:inherit;padding:16px;border:1px solid #8996aa;border-radius:8px;background:white}textarea{height:170px}button{padding:12px 18px;font:inherit;margin:8px}output{display:block;padding:16px;background:#e9eef8}#editor{min-height:90px}code{font-size:.9em}</style>
+<h1>forblaze ローカル入力検証</h1>
+<p>入力はこのページのメモリ内だけで扱います。外部通信・永続化・外部への送信を行いません。設定した開始キー（既定はF8）で開始し、話して、同じキーで停止します。</p>
+<form id="form"><label for="single">通常の入力欄（Enterでページ内の送信相当操作）</label><input id="single" autocomplete="off"><button>ページ内で送信相当</button></form>
+<label for="multi">複数行（Enter・Shift＋Enterは改行）</label><textarea id="multi"></textarea>
+<label>編集領域</label><div id="editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="編集領域"></div>
+<label for="secure">保護された欄（音声入力を開始しない）</label><input id="secure" type="password" autocomplete="off">
+<button id="reset" type="button">検証欄を空にする</button>
+<output id="status" aria-live="polite">送信相当：0回。最後の操作：なし</output>
+<p>手入力・Enter・矢印・削除・貼り付け・クリックをすると音声入力を終了し、パネルが閉じます。入力済みの文は残ります。手入力後は入力位置を選び、設定した開始キーを1回押すと新しい音声入力を始められます。</p>
+<script>
+let submissions=0;
+const status=document.querySelector('#status');
+document.querySelector('#form').addEventListener('submit',event=>{event.preventDefault();submissions++;status.textContent=`送信相当：${submissions}回。最後の操作：ページ内の送信相当`;document.querySelector('#single').value='';});
+document.querySelector('#reset').addEventListener('click',()=>{for(const e of document.querySelectorAll('input,textarea'))e.value='';document.querySelector('#editor').textContent='';submissions=0;status.textContent='送信相当：0回。最後の操作：リセット';});
+</script></html>
